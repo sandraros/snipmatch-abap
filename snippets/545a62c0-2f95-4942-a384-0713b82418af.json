@@ -1,0 +1,13 @@
+{
+  "uuid": "545a62c0-2f95-4942-a384-0713b82418af",
+  "name": "read text file from application server",
+  "description": "",
+  "extraSearchTerms": [
+    "dataset"
+  ],
+  "tags": [],
+  "code": "OPEN DATASET ${dataset} FOR INPUT IN TEXT MODE.\r\nIF sy-subrc \u003d 0.\r\n  DO.\r\n    READ DATASET ${dataset} INTO ${line}.\r\n    IF sy-subrc \u003c\u003e 0.\r\n      EXIT.\r\n    ENDIF.\r\n    ${cursor}\r\n  ENDDO.\r\n  CLOSE DATASET ${dataset}.\r\nENDIF.",
+  "location": "GENERIC_FILE",
+  "filenameRestrictions": [],
+  "dependencies": []
+}
