@@ -1,10 +1,12 @@
 {
   "uuid": "40b8f1ba-ca45-43ae-b813-ef0431be56db",
-  "name": "a",
+  "name": "read utf-16 text file from application server",
   "description": "",
-  "extraSearchTerms": [],
+  "extraSearchTerms": [
+    "dataset"
+  ],
   "tags": [],
-  "code": "",
+  "code": "DATA: ${dataset} TYPE string,\r\n      ${contents} TYPE xstring.\r\n\" open the utf-16 text file as a binary file for reading it and change the encoding\r\nOPEN DATASET ${dataset} FOR INPUT IN BINARY MODE.\r\nIF sy-subrc \u003c\u003e 0.\r\n  \" todo not found\r\nELSE.\r\n  \" read the contents at once\r\n  READ DATASET ${dataset} INTO ${contents}.\r\n  ${cursor} \" 1. get snippet \"code page\" for converting ${contents} utf-16le (4103) or utf-16be (4102) into a text variable\r\n  FREE ${contents}\r\n  ${cursor} \" 2. define what should be done here?\r\n  CLOSE DATASET ${dataset}.\r\nENDIF.",
   "location": "GENERIC_FILE",
   "filenameRestrictions": [],
   "dependencies": []
