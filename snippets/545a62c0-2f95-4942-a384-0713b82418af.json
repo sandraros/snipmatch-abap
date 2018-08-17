@@ -1,0 +1,13 @@
+{
+  "uuid": "545a62c0-2f95-4942-a384-0713b82418af",
+  "name": "read text file from application server",
+  "description": "",
+  "extraSearchTerms": [
+    "dataset"
+  ],
+  "tags": [],
+  "code": "\" open the text file in utf-8 for reading it\r\nOPEN DATASET ${dataset} FOR INPUT IN TEXT MODE ENCODING DEFAULT.\r\nIF sy-subrc \u003d 0.\r\n  DO.\r\n    \" read the next text line\r\n    READ DATASET ${dataset} INTO ${line}.\r\n    IF sy-subrc \u003c\u003e 0.\r\n      EXIT.\r\n    ENDIF.\r\n    ${cursor} \" what should be done here?\r\n  ENDDO.\r\n  CLOSE DATASET ${dataset}.\r\nENDIF.",
+  "location": "GENERIC_FILE",
+  "filenameRestrictions": [],
+  "dependencies": []
+}
