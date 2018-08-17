@@ -1,0 +1,13 @@
+{
+  "uuid": "0d3bcb41-22ef-4d41-bde6-279d2ed3ddef",
+  "name": "Read text file on application server",
+  "description": "Read a text file on the application server",
+  "extraSearchTerms": [
+    "dataset"
+  ],
+  "tags": [],
+  "code": "OPEN DATASET ${dataset} FOR INPUT IN TEXT MODE.\nIF sy-subrc = 0.${cursor}\n,
+  "location": "FILE",
+  "filenameRestrictions": [],
+  "dependencies": []
+}
