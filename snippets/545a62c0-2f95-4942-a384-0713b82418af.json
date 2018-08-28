@@ -1,6 +1,6 @@
 {
   "uuid": "545a62c0-2f95-4942-a384-0713b82418af",
-  "name": "read utf-8 text file from application server",
+  "name": "read a (utf-8) text file from the application server",
   "description": "",
   "extraSearchTerms": [
     "dataset"
