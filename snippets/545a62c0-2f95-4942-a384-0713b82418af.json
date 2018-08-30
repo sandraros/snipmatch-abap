@@ -6,7 +6,7 @@
     "dataset"
   ],
   "tags": [],
-  "code": "DATA:  ${dataset} TYPE string,\r\n      ${line} TYPE string.\r\n\" open the utf-8 text file for reading it\r\nOPEN DATASET ${dataset} FOR INPUT IN TEXT MODE ENCODING DEFAULT.\r\nIF sy-subrc \u003d 0.\r\n  DO.\r\n    \" read the next text line\r\n    READ DATASET ${dataset} INTO ${line}.\r\n    IF sy-subrc \u003c\u003e 0.\r\n      EXIT.\r\n    ENDIF.\r\n    ${cursor} \" what should be done here?\r\n  ENDDO.\r\n  CLOSE DATASET ${dataset}.\r\nENDIF.",
+  "code": "DATA: ${dataset} TYPE string,\r\n      ${line} TYPE string.\r\n\" open the utf-8 text file for reading it\r\nOPEN DATASET ${dataset} FOR INPUT IN TEXT MODE ENCODING DEFAULT.\r\nIF sy-subrc \u003d 0.\r\n  DO.\r\n    \" read the next text line\r\n    READ DATASET ${dataset} INTO ${line}.\r\n    IF sy-subrc \u003c\u003e 0.\r\n      EXIT.\r\n    ENDIF.\r\n    ${cursor} \" what should be done here?\r\n  ENDDO.\r\n  CLOSE DATASET ${dataset}.\r\nENDIF.",
   "location": "GENERIC_FILE",
   "filenameRestrictions": [],
   "dependencies": []
