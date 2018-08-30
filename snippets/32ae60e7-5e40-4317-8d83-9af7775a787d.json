@@ -1,0 +1,11 @@
+{
+  "uuid": "32ae60e7-5e40-4317-8d83-9af7775a787d",
+  "name": "delete file on application server",
+  "description": "",
+  "extraSearchTerms": [],
+  "tags": [],
+  "code": "DELETE DATASET .",
+  "location": "GENERIC_FILE",
+  "filenameRestrictions": [],
+  "dependencies": []
+}

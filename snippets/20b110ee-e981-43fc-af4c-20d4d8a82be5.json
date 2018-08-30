@@ -1,10 +1,12 @@
 {
   "uuid": "20b110ee-e981-43fc-af4c-20d4d8a82be5",
-  "name": "bbbb",
+  "name": "read binary file from application server",
   "description": "",
-  "extraSearchTerms": [],
+  "extraSearchTerms": [
+    "dataset"
+  ],
   "tags": [],
-  "code": "",
+  "code": "DATA: ${dataset} TYPE string,\r\n      ${contents} TYPE xstring.\r\n\" open the binary file for reading it\r\nOPEN DATASET ${dataset} FOR INPUT IN BINARY MODE.\r\nIF sy-subrc \u003c\u003e 0.\r\n  \" todo not found\r\nELSE.\r\n  \" read the contents at once\r\n  READ DATASET ${dataset} INTO ${contents}.\r\n  ${cursor} \" what should be done here?\r\n  CLOSE DATASET ${dataset}.\r\nENDIF.",
   "location": "GENERIC_FILE",
   "filenameRestrictions": [],
   "dependencies": []
