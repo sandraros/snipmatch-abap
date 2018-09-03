@@ -1,0 +1,13 @@
+{
+  "uuid": "ce8d6d4d-aa43-409c-8204-ef6b503f40ad",
+  "name": "read sorted or standard internal table with binary search, if not found read previous or next line",
+  "description": "",
+  "extraSearchTerms": [
+    "itab"
+  ],
+  "tags": [],
+  "code": "READ TABLE ${line}s \r\n    WITH KEY comp1 \u003d value1\r\n    BINARY SEARCH\r\n    ASSIGNING FIELD-SYMBOL(\u003c${line}\u003e)\r\n* if not found, choose EITHER to read the previous line\r\nIF sy-subrc BETWEEN 4 and 8 AND sy-tabix \u003e\u003d 2.\r\n  READ TABLE ${line}s ASSIGNING \u003c${line}\u003e INDEX ( sy-tabix - 1 ).\r\nENDIF.\r\n* OR to read the next line\r\nIF sy-subrc \u003d 4.\r\n  READ TABLE ${line}s ASSIGNING \u003c${line}\u003e INDEX sy-tabix.\r\nENDIF.\r\n",
+  "location": "GENERIC_FILE",
+  "filenameRestrictions": [],
+  "dependencies": []
+}

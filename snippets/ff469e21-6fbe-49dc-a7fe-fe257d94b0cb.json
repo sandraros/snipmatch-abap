@@ -1,0 +1,11 @@
+{
+  "uuid": "ff469e21-6fbe-49dc-a7fe-fe257d94b0cb",
+  "name": "substring_after",
+  "description": "",
+  "extraSearchTerms": [],
+  "tags": [],
+  "code": "substring_from( val \u003d ${val} sub \u003d ${sub} regex \u003d ${regex} occ \u003d ${occ} len \u003d ${len} )",
+  "location": "GENERIC_FILE",
+  "filenameRestrictions": [],
+  "dependencies": []
+}

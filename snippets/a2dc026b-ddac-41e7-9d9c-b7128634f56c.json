@@ -1,0 +1,13 @@
+{
+  "uuid": "a2dc026b-ddac-41e7-9d9c-b7128634f56c",
+  "name": "write binary file to application server",
+  "description": "",
+  "extraSearchTerms": [
+    "AS open dataset"
+  ],
+  "tags": [],
+  "code": "DATA: ${dataset} TYPE string,\r\n      ${bytes} TYPE xstring.\r\nOPEN DATASET ${dataset} FOR OUTPUT IN BINARY MODE.\r\nIF sy-subrc \u003d 0.\r\n  TRANSFER ${bytes} TO ${dataset}.\r\n  CLOSE DATASET TO ${dataset}.\r\nENDIF.\r\n",
+  "location": "GENERIC_FILE",
+  "filenameRestrictions": [],
+  "dependencies": []
+}

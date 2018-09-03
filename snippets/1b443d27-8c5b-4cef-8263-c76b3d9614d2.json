@@ -1,0 +1,13 @@
+{
+  "uuid": "1b443d27-8c5b-4cef-8263-c76b3d9614d2",
+  "name": "encode a text variable into bytes of a given code page",
+  "description": "",
+  "extraSearchTerms": [
+    "utf"
+  ],
+  "tags": [],
+  "code": "* target code page: for instance `utf-8`, `utf-16le`, `utf-16be`, ...\r\n* (snipmatch \"TCP00A\" to get possible values)\r\n\r\nDATA: ${target} TYPE xstring,\r\n      ${source_text} TYPE string.\r\n\r\n${target} \u003d cl_abap_codepage\u003d\u003econvert_to(\r\n          source   \u003d ${source_text}\r\n          codepage \u003d \u0027${target_codepage}\u0027 ##NO_TEXT\r\n          ).\r\n",
+  "location": "GENERIC_FILE",
+  "filenameRestrictions": [],
+  "dependencies": []
+}

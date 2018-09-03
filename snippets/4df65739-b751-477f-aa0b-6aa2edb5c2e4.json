@@ -1,0 +1,17 @@
+{
+  "uuid": "4df65739-b751-477f-aa0b-6aa2edb5c2e4",
+  "name": "list of HTTP character sets in table TCP00A (cl_abap_codepage)",
+  "description": "",
+  "extraSearchTerms": [
+    "java",
+    "utf",
+    "keke tata"
+  ],
+  "tags": [
+    "DMS"
+  ],
+  "code": "* List of HTTP and JAVA code pages defined in SAP (table TCP00A, column CPATTR, lines with CPATTRKIND \u003d \"H\" or \"J\")\r\n*   iso-8859-1\r\n*   utf-8\r\n*   utf-16le\r\n*   utf-16be\r\n*   us-ascii\r\n*   ibm500\r\n*   windows-1251\r\n*   koi8-u\r\n*   shift_jis\r\n*   big5\r\n* \r\n* Example :\r\n*   string \u003d cl_abap_codepage\u003d\u003econvert_from( \r\n*                 source   \u003d xstring\r\n*                 codepage \u003d `iso-8859-1` ).\r\n*   xstring \u003d cl_abap_codepage\u003d\u003econvert_to( \r\n*                 source   \u003d string\r\n*                 codepage \u003d `utf-8` ).",
+  "location": "GENERIC_FILE",
+  "filenameRestrictions": [],
+  "dependencies": []
+}
